@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>سينما فيو – احجز وادخل القاعة</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>🎬 سينما فيو</h1><p class="hint" style="margin:-6px 0 12px">📍 برج الفاتح – الخرطوم، السودان</p>
+  <div class="prog" id="prog"></div>
+  <div id="app"></div>
+</div>
+
+<div id="vw" hidden>
+  <canvas id="cv" width="800" height="500"></canvas>
+  <div class="hud"><span id="vSeat"></span><span class="tag" id="vDist"></span><span class="tag" id="vRate"></span></div>
+  <div class="ctl">
+    <button onclick="mv(0,-1)" aria-label="يسار">◀</button>
+    <button onclick="mv(-1,0)" aria-label="قدام">▲</button>
+    <button onclick="mv(1,0)" aria-label="ورا">▼</button>
+    <button onclick="mv(0,1)" aria-label="يمين">▶</button>
+    <button class="pri" id="vTog" onclick="tog()"></button>
+    <button onclick="closeV()">رجوع للخريطة</button>
+  </div>
+  <p class="hint" id="vMsg" style="margin:8px 0 0"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
